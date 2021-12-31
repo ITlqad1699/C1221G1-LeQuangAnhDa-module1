@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>surveykhachhang</title>
+<style>
+
+    td{ width: 25px; text-align: center;
+
+    }
+    th{
+text-align: left;
+    }
+</style>
+</head>
+<body style="font-family: Arial">
+
+<div style=" width: 1000px;background: bisque">
+    <div  style="border-style: inset">
+        <h1>Market Reserch Survey</h1>
+        <p style="margin: 0;padding: 0" > pleese take a few moments to complete this satisfaction survey</p>
+    </div>
+        <hr>
+    <form>
+        <b>what is your age range?</b><br>
+    <select name="age">
+        <option value="tuoi">18-24</option>
+        <option value="tuoi">25-34</option>
+        <option value="tuoi">35-50</option>
+        <option value="tuoi">50+ </option>
+    </select> <br><br>
+<b>what is your yearly income range?</b><br>
+    <select name="icome">
+        <option value="money">$0-25,000</option>
+        <option value="money">$25,001-$50,000</option>
+        <option value="money">$50,000-$100,000</option>
+        <option value="money">$100,000+ </option>
+    </select> <br><br>
+<b>Gender indentity</b> <br>
+    <label style="font-size: smaller">
+        <input type="radio" name="gender" checked>Male<br><br>
+        <input type="radio" name="gender" checked>Female<br><br>
+        <input type="radio" name="gender" checked>Nonbinary<br><br>
+        <input type="radio" name="gender" checked>Other<br><br>
+    </label>
+        <label><b>Which of the following products have your purchased in the last 2 months</b></label>
+        <ul style="list-style-type: none; padding-left: 0px;margin: 0 ">
+            <li><input type="checkbox" na me="check"> product1</li><br>
+            <li><input type="checkbox" name="check"> product2</li><br>
+            <li><input type="checkbox" name="check"> product3</li><br>
+        </ul>
+        <b>How often would you use uor new product?</b>
+        <ul style="list-style-type: none;margin: 0 0 0 0;padding-left: 0px">
+            <li><input type="radio" name="day" checked>Daily</li><br>
+            <li><input type="radio" name="day" checked>Weekly</li><br>
+            <li><input type="radio" name="day" checked>Monthly</li><br>
+        </ul>
+    <b>what features woulid you like to see in the new product</b> <br>
+
+        $ <input type="text" name="tien" style="width: 70px">-<input type="text" name="tien" style="width: 30px"> <br>
+            <span style="margin-left: 10px">Dollar</span>
+            <span style="margin-left: 38px">cent</span> <br>
+
+     <b> what would you pay for the new product?</b> <br>
+
+
+        <textarea cols="130" rows="12" style=""></textarea><br>
+
+
+        <label>please rate your level of agreement with the follwing statements.</label><br>
+
+
+        <table border="1px"  width="1000px" cellpadding="10px" >
+            <tr>
+                 <th></th>
+                 <th>strongly disagree</th>
+                <th>disagree</th>
+                 <th>agree</th>
+            </tr>
+                <tr style="background-color:aliceblue">
+                <th >our products are priced farly</th>
+                <td>1<br><input type="radio" name="trave"></td>
+                <td>2<br><input type="radio" name="trave"></td>
+                <td>3<br><input type="radio" name="trave"></td>
+            </tr>
+            <tr>
+                <th>Our products are high quality</th>
+                <td>1<br><input type="radio" name="trave"></td>
+                <td>2<br><input type="radio" name="trave"></td>
+                <td>3<br><input type="radio" name="trave"></td>
+            </tr>
+            <tr style="background-color:aliceblue" >
+                <th style="w"><b>you would recommend our product to a friend or coworker</b></th>
+                <td>1<br><input type="radio" name="trave"></td>
+                <td>2<br><input type="radio" name="trave"></td>
+                <td>3<br><input type="radio" name="trave"></td>
+            </tr>
+        </table>
+            <input type="submit" name="gửi" >
+    </form>
+</div>
+</body>
+</html>
