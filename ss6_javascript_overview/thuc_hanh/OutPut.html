@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Out Put</title>
+</head>
+<body>
+<!-- Thuộc tính alert-->
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+    function showMessage(){
+        alert('Xin chào!');
+    }
+</script>
+<!--kết quả sử dụng thẻ HTML -->
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+    function showMessage(){
+        document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+    }
+</script>
+<!--hàm document.write-->
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+    function showMessage(){
+        document.write('Xin chào!');
+    }
+</script>
+<!-- hamf console.log()-->
+<button type="button" onclick="showMessage();">Click Me!</button>
+<script>
+    function showMessage(){
+        console.log('Xin chào!');
+    }
+</script>
+</body>
+</html>
