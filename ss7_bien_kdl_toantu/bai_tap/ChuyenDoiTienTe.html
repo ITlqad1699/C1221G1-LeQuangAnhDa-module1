@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 550px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <table>
+              <tr>
+                  <th>Amout</th>
+                  <th>From Currency</th>
+                  <th>To Currency</th>
+              </tr>
+            </table>
+            <input type="text" id="dauvao">
+            <select name="" id="s1" style="margin-left: 50px">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select>
+            <select name="" id="s2" style="margin-left: 150px">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select>
+            <button onclick="changemoney()" style="margin-left: 50px">Convert</button>
+        </form>
+        <script>
+            function changemoney()
+            {
+                let input = document.getElementById('dauvao').value;
+                let select1= document.getElementById('s1').value;
+                let select2= document.getElementById('s2').value;
+                if (select1 == select2)
+                {
+                    alert(input)
+
+                }
+                else if (select1 == "vnd" && select2 =="usd")
+                    alert(input/23000)
+                else
+                    alert(input*23000)
+            }
+        </script>
+    </div>
+</body>
+</html>
