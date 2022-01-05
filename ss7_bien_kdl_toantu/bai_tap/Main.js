@@ -5,7 +5,7 @@ items.forEach(function (btn) {
     {
 
         if(input.innerHTML == '0')
-            input.innerHTML='';
+            input.innerHTML='0';
         if (btn.innerHTML == 'AC')
             input.innerHTML='0';
         else if(btn.innerHTML=='DEL'){
