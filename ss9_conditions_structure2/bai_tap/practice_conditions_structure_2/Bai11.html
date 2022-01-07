@@ -16,6 +16,7 @@
             else if (thuNhapTinhThue <= 18) thue = 5*(5/100) + 5*(10/100) + (thuNhapTinhThue-10)*(15/100);
             else if (thuNhapTinhThue <= 32) thue = 5*(5/100) + 5*(10/100) + (8*15/100) + (thuNhapTinhThue-18)*(20/100);
             else if (thuNhapTinhThue <= 52) thue = 5*(5/100) + 5*(10/100) + (8*15/100) + 20*(20/100) + (thuNhapTinhThue-32)*(25/100);
+            else thue = 5*(5/100) + 5*(10/100) + 8*(15/100) + 20*(20/100) + 20*25/100+(thuNhapTinhThue-52)*(25/100)
             document.write("số tiền thuế phải đóng: " +thue );
             document.write("<br/>");
             document.write("tổng thu nhập sau thuế là: " + (tongThuNhap-thue)+"triệu đồng/tháng");
