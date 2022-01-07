@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính hoa hồng</title>
+</head>
+<body>
+<!--viết chương trình nhập vào doanh số bán hàng biết:-->
+<!--bán được từ 100 cái trở lên thì nhận đc 2%, từ 150 cái trở lên thì nhận đc 5%, từ 250 cái thì nhận được 7%-->
+    <script>
+        let soluong = parseInt(prompt('số lượng hàng bán được'));
+        const  dongia = 100000;
+        let tongtien = dongia*soluong;
+        var hoahong;
+
+        if(soluong >= 250) {hoahong = tongtien*(7/100);}
+        else if (soluong >= 150) {hoahong=tongtien*(5/100);}
+        else  { hoahong = tongtien*(2/100);}
+        document.write("số tiền hoa hồng là " + hoahong);
+    </script>
+</body>
+</html>
