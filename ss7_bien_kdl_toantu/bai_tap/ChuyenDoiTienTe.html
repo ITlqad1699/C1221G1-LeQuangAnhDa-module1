@@ -29,22 +29,17 @@
                 <option value="vnd">VND</option>
                 <option value="usd">USD</option>
             </select>
-            <button onclick="changemoney()" style="margin-left: 50px">Convert</button>
+            <button onclick="changeMoney()" style="margin-left: 50px">Convert</button>
         </form>
         <script>
-            function changemoney()
+            function changeMoney()
             {
                 let input = document.getElementById('dauvao').value;
                 let select1= document.getElementById('s1').value;
                 let select2= document.getElementById('s2').value;
-                if (select1 === select2) {
-                    alert(input)
-                }
-                else if (select1 === "vnd" && select2 ==="usd") {
-                    alert(input/23000)}
-                else {
-                    alert(input*23000)}
-                }
+                if (select1 === select2) alert(input);
+                else if (select1 === "vnd" && select2 ==="usd") alert(input/23000);
+                else alert(input*23000);
             }
         </script>
     </div>

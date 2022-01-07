@@ -22,6 +22,7 @@
     <img class="img" id="panda4" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg" onclick="changeimg4()"> <br>
     <img class="img" id="panda5" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg" onclick="changeimg5()">
 </div>
+
 <script>
     var index1 = 1;
     var index2 = 1;
@@ -34,7 +35,7 @@
         index1++;
         if (index1 == 3)
             index1 = 0;
-        Notification();
+        notification();
     }
     function changeimg2() {
         let imgs2 = ["https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg"];
@@ -42,7 +43,7 @@
         index2++;
         if (index2 == 3)
             index2 = 0;
-        Notification();
+        notification();
     }
     function changeimg3() {
         let imgs3 = ["https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg"];
@@ -50,7 +51,7 @@
         index3++;
         if (index3 == 3)
             index3 = 0;
-        Notification();
+        notification();
     }
     function changeimg4() {
         let imgs4 = ["https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/monkey_part4x1.jpg"];
@@ -58,7 +59,7 @@
         index4++;
         if (index4 == 3)
             index4 = 0;
-        Notification();
+        notification();
     }
     function changeimg5() {
         var imgs5 = ["https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg", "https://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg"];
@@ -66,14 +67,14 @@
         index5++;
         if (index5 == 3)
             index5 = 0;
-        Notification();
+        notification();
     }
-    function Notification() {
+    function notification() {
         if (index1 == index2) {
             if (index2 == index3) {
                 if (index3 == index4) {
-                    if (index4 == index5) {
-                        alert("scores")
+                    if (index4 == index5) { alert('scores')
+
                     }
                 }
             }

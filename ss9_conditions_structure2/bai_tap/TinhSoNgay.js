@@ -7,17 +7,17 @@ function CountDay() {
         case "7":
         case "9":
         case "11":
-            document.write('tháng này có 31 ngày');
+            document.write('tháng' + month +'có 31 ngày');
             break;
         case "4":
         case "6":
         case "8":
         case "10":
         case "12":
-            document.write('tháng này có 30 ngày ');
+            document.write('tháng'+ month + 'có 30 ngày ');
             break;
         case "2":
-            document.write('tháng này có 28 hoặc 29 ngày');
+            document.write('tháng'+ month + 'có 28 hoặc 29 ngày');
     }
 
 }

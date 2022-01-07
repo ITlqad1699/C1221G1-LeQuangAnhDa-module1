@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính tiền điện</title>
+</head>
+<body>
+        <script>
+            // tính tiền theo mức chữ điện
+            // Thông số đầu vào:
+            const muc1 = 50;
+            const muc2 = 100;
+            const muc3 = 200;
+            const muc4 = 300;
+            const muc5 = 400;
+            let soTien = null;
+            let soDien = parseInt(prompt('nhập vào số chữ điện: '));
+            // Cho chạy điều kiện if...else để tính tiền điện theo bậc thang
+            if  (soDien <= 50) soTien = soDien*1678;
+            else if (soDien <= 100) soTien = muc1*1678+(soDien-muc1)*1734;
+            else if (soDien <= 200) soTien = muc1*1678+50*1734+(soDien-muc2)*2015;
+            else if (soDien <= 300) soTien = muc1*1678+50*1734+100*2015+(soDien-muc3)*2536;
+            else if (soDien <= 400) soTien = muc1*1678+50*1734+100*2015+100*2536+(soDien-muc4)*2834;
+            else soTien = muc5*soDien;
+            document.write("só tiền điện phải đóng là: " +soTien + " VND");
+        </script>
+</body>
+</html>

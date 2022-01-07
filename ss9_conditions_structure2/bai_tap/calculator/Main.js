@@ -9,10 +9,10 @@ items.forEach(function (btn) {
         if (btn.innerHTML == 'AC')
             input.innerHTML='0';
         else if(btn.innerHTML=='DEL'){
-            var arrtext = Array.from(input.innerHTML);
-            arrtext.splice(arrtext.length-1,1);
-            if (arrtext.length != 0)
-            input.innerHTML=arrtext.join('');
+            let arrText = Array.from(input.innerHTML);
+            arrText.splice(arrText.length-1,1);
+            if (arrText.length != 0)
+            input.innerHTML=arrText.join('');
             else input.innerHTML= '0';
         }
         else if (btn.innerHTML == '='){

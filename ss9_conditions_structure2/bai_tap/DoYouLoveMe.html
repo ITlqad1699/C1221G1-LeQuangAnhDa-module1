@@ -8,26 +8,26 @@
 <div style="margin-left: 400px">
             <h2> Do you love me ?</h2>
                 <input  id="yes" type="button" value="YES" onclick="yes()"/>
-                <input  id ="no" type="button" value="NO" onmouseover="love()"/>
+                <input style="position: relative" id ="no" type="button" value="NO" onmouseover="love()"/>
 
 </div>
     <script>
-          var flag = 1;
-          var element = document.getElementById("no");
+          let flag = 1;
+          let element = document.getElementById("no");
         function yes() {
             alert("yeh,  Min Xư Yêu Chà Dâu"); }
         function love() {
             if (flag == 1){
-                element.style.top = parseInt(element.style.top) + 90 +'px' ;
-                element.style.left = parseInt(element.style.top) + 400 + 'px'
+                element.style.top = 500 + 'px' ;
+                element.style.left = 400 + 'px';
                 flag = 2;
             } else if (flag == 2 ){
-                element.style.top = parseInt(element.style.top) + 250 +'px' ;
-                element.style.left = parseInt(element.style.top) + 490 + 'px'
+                element.style.top =  250 +'px' ;
+                element.style.left =  490 + 'px';
                 flag = 3;
             } else if (flag == 3){
-                element.style.top = parseInt(element.style.top) + 20 +'px' ;
-                element.style.left = parseInt(element.style.top) + 330 + 'px'
+                element.style.top =  20 +'px' ;
+                element.style.left =  330 + 'px'
                 flag = 1;}
         }
     </script>

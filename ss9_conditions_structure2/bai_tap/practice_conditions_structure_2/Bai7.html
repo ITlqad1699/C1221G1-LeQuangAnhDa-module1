@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính phương trình bậc 2</title>
+</head>
+<body>
+        <h1>Giải phương trình bậc 2</h1>
+        <script>
+            let x = null;
+            let a = parseFloat(prompt("nhập vào hệ số a = "));
+            let b = parseFloat(prompt("nhập vào hệ số b = "));
+            let c = parseFloat(prompt("nhập vào hệ số c = "));
+            let delta = (b*b-4*a*c);
+            let n1 = (-b-Math.sqrt(delta))/2*a;
+            let n2 = (-b+Math.sqrt(delta))/2*a;
+
+            if (a==0) {
+                if (b==0){
+                    if(c==0) document.write("phương trình có vô số nghiệm");
+                    else document.write("phương trình vô nghiệm");
+                        }
+                else   {document.write(" nghiệm của phương trình bậc 2: ");document.write(a+'x^2 +'+b +'x+'+c +"= 0 là:" + x);}
+            }
+                else if ( delta < 0 ) document.write("phương trình vô nghiệm");
+                else if (delta ==0)  {document.write("phương trình có nghiệm kép: " +(-b/2*a))}
+                else {
+                    document.write(" phương trình bậc 2: ");document.write( a+'x^2 +'+b +'x+'+c +'= 0  có 2 nghiệm phân biệt là' +n1 + ',' +n2);}
+
+        </script>
+
+</body>
+</html>

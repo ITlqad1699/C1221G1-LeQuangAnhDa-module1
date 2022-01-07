@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi suất ngân hàng</title>
+</head>
+<body>
+<!-- Bài này em không biết làm if else sao hết, nếu có thì chắc thêm quý vào hay gì đó phải không ạ?  -->
+    <script>
+        let tien = parseInt(prompt("nhập vào số tiền gửi ngân hàng: "));
+        let laiSuat = 0.1/100;
+            for (let i =1; i<=12; i++){
+                 tien = tien*(1+laiSuat);
+               }
+        document.write("tổng cả vốn lẫn lãi sau 12 tháng là: "+tienGui + "trieu VND");
+    </script>
+</body>
+</html>

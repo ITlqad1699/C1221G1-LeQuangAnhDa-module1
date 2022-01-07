@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+        <script>
+            let tongThuNhap = parseInt(prompt("nhập vào tổng thu nhập trước thuế:"));
+            let thuNhapMienThue = parseInt(prompt("nhập vào thu nhập được miễn thuế:"));
+            let khoanGiam = parseInt(prompt("nhập vào khoản được giảm thuế:"));
+            let thuNhapTinhThue = tongThuNhap - thuNhapMienThue - khoanGiam;
+            let thue = null;
+            if (thuNhapTinhThue <= 5) thue = thuNhapTinhThue*(5/100);
+            else if (thuNhapTinhThue <= 10) thue = 5*(5/100) + (thuNhapTinhThue-5)*(10/100);
+            else if (thuNhapTinhThue <= 18) thue = 5*(5/100) + 5*(10/100) + (thuNhapTinhThue-10)*(15/100);
+            else if (thuNhapTinhThue <= 32) thue = 5*(5/100) + 5*(10/100) + (8*15/100) + (thuNhapTinhThue-18)*(20/100);
+            else if (thuNhapTinhThue <= 52) thue = 5*(5/100) + 5*(10/100) + (8*15/100) + 20*(20/100) + (thuNhapTinhThue-32)*(25/100);
+            document.write("số tiền thuế phải đóng: " +thue );
+            document.write("<br/>");
+            document.write("tổng thu nhập sau thuế là: " + (tongThuNhap-thue)+"triệu đồng/tháng");
+        </script>
+</body>
+</html>
