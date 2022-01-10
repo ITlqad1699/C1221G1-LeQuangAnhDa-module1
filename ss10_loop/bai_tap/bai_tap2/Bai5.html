@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính lãi suất</title>
+</head>
+<body>
+<script>
+    let tien = parseInt(prompt("nhập vào số tiền gửi ngân hàng: "));
+    let thang = parseInt(prompt("nhập vào số tháng cần gửi ngân hàng: "));
+    let laiSuat;
+    //Xét điều kiện lấy lãi suất:
+    if (thang <= 6) {laiSuat =0.1/100;}
+    else if (thang <=12) {laiSuat = 0.2/100;}
+    else {laiSuat = 0.3/100;}
+    //Thực hiện vòng lặp tính tổng vốn lẫn lời sau thời hạng "thang":
+    for (let i =1; i<=thang; i++){
+        tien = tien*(1+laiSuat);
+    }
+    document.write('tổng cả vốn lẫn lãi sau' + thang + 'tháng là:'+ tien + 'trieu VND');
+</script>
+
+</body>
+</html>

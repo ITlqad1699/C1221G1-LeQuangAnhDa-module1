@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hiển thị ra 20 số trong dãy fibonacci</title>
+</head>
+<body>
+    <script>
+        let n = 0;
+        let m = 1;
+        let fibo;
+        for (let i =1; i <=20;i++){
+            fibo = m + n;
+            n = m;
+            m = fibo;
+            document.write(fibo + ',');
+        }
+    </script>
+</body>
+</html>'
+

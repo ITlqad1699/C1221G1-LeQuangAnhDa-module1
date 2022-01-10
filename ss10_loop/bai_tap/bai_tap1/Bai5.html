@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SumFibonacci</title>
+</head>
+<body>
+        <script>
+            let n = 0;
+            let m = 1;
+            let fibo,sum = 0;
+            let i = 1
+            // Cách 1:
+            // for (let i =1; i <=20;i++){
+            //     fibo = m + n;
+            //     sum = sum +fibo;
+            //     n = m;
+            //     m = fibo;
+            // }
+            // document.write('tổng 20 số đầu tiên của dãy fibonacci là: '+sum);
+            //Cách 2:
+            while( i<=20){
+                fibo = m + n;
+                sum = sum +fibo;
+                n = m;
+                m = fibo;
+                i++;
+            }
+            document.write('tổng 20 số đầu tiên của dãy fibonacci là: '+sum);
+        </script>
+</body>
+</html>

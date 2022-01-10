@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy fibonacci</title>
+</head>
+<body>
+    <script>
+        let n = 0;
+        let m = 1;
+        let fibo;
+        for (let i =1;i<1000;i++){
+            fibo = n + m;
+            n = m;
+            m = fibo;
+            document.write(fibo+'<br/>');
+        }
+    </script>
+</body>
+</html>

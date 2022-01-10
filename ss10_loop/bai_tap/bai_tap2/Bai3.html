@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra tam giac</title>
+</head>
+<body>
+
+        <script>
+                const doDai =10;
+                //Trường hợp 1:
+                for (let i =0; i<doDai; i++){
+                    for (let j=0; j<i;j++){
+                        document.write('*');
+                    }
+                    document.write('<br>');
+                }
+                document.write('<br/>');
+                //Trường hợp 2:
+                for (let i = doDai; i>0; i--){
+                   for (let j=0; j<i;j++){
+                       document.write('*');
+                   }
+                   document.write('<br>');
+                }
+                document.write('<br/>');
+                //Trường hợp 3:
+                for (let i=0;i<doDai;i++){
+                   for(let j=0;j<i;j++){
+                       document.write('&nbsp ');
+                   }
+                   for (let k=0;k<doDai-i;k++){
+                       document.write('*');
+                   }
+                   document.write('<br>');
+                }
+                document.write('<br/>');
+                //Trường hợp 4:
+                for (let i=0;i<=doDai;i++){
+                    for(let j=1;j<=doDai-i;j++){
+                        document.write('&nbsp ');
+                    }
+                    for (let j=0;j<i;j++){
+                        document.write('*');
+                    }
+                    document.write('<br/>');
+                }
+
+
+        </script>
+</body>
+</html>

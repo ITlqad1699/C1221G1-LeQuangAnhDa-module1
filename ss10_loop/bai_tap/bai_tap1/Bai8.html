@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameDonSo</title>
+    <style>
+        div{
+            width: 200px; height: 50px;
+            background-color: firebrick;
+            text-align: center;
+            margin-left: 600px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+                <input type="button" id="play" value="Play" onclick="choiGame()">
+                <input type="reset" id="reset" value="Reset" onclick="choiLai()">
+    </div>
+    <script>
+        function choiGame() {
+            let canDuoi = parseInt(prompt('nhập vào cận dưới : '));
+            let canTren = parseInt(prompt('nhập vào cận trên : '));
+            var duDoan = parseInt(prompt('mời bạn nhập vào số dự đoán : '));
+            let soNgauNhien = Math.floor(Math.random()*(canTren - canDuoi + 1)) + canDuoi;
+            if ((duDoan < canDuoi) || (duDoan > canTren)) duDoan = parseInt(prompt('bạn nhập sai rồi xin mời nhập lại: '));
+            else {
+                for (let i =1; i <=3; i++ ) {
+                    if (duDoan === soNgauNhien) {alert('bạn đã chiến thắng'); break;}
+                    else if (duDoan > soNgauNhien) {
+                        duDoan = parseInt(prompt(' số dự đoán lớn hơn random mời bạn lại nhập vào số dự đoán : '));
+                    }
+                    else  if (duDoan < soNgauNhien) {
+                        duDoan = parseInt(prompt('số dự đoán bé hơn random mời bạn  lại nhập vào số dự đoán : '));
+                    }
+                }
+            }
+            alert('chơi lại nào!!!');
+        }
+        // function choiLai() {
+        //     let id1 = document.getElementById("play")
+        // }
+    </script>
+
+</body>
+</html>
