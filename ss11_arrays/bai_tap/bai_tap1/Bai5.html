@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt();
+    let count = 0;
+    for (let i = 0; i < chuoi.length; i++) {
+        if (chuoi[i - 1] == '-' && (chuoi[i] % 1) == 0) {
+            count = count + 1;
+        }
+    }
+    console.log(chuoi);
+    console.log(count);
+</script>
+</body>
+</html>

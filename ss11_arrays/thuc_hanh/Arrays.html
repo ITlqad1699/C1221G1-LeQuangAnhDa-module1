@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng và thuộc tính</title>
+</head>
+<body>
+        <script>
+            let arrays = [1,2,3,4];
+            //Hàm push():
+            arrays.push(5);
+            document.write(arrays);
+            document.write('<br/>');
+            //Hàm unshift():
+            arrays.unshift(5);
+            document.write(arrays);
+            document.write('<br/>');
+            //xóa đi phần từ của mảng:
+            //Hàm pop():
+            arrays.pop();
+            document.write(arrays);
+            document.write('<br/>');
+            //Hàm shift():
+            arrays.shift();
+            document.write(arrays);
+            document.write('<br/>');
+            //Hàm sort:
+            arrays.sort();
+            document.write(arrays);
+            document.write('<br/>');
+            //Hàm reverse:
+            arrays.reverse();
+            document.write(arrays);
+            document.write('<br/>');
+            //làm đúng chức năng của hàm sort:
+            let points = [40, 100, 1, 5, 25, 10]
+            points.sort(function(a, b) {
+                return a - b
+            })
+            document.write(points);
+            document.write('<br/>');
+            //Sử dụng hàm map
+            const animals = [
+                {
+                    "id":"1",
+                    "name": "dog",
+                    "size": "small"
+                },
+                {
+                    "id": '2',
+                    "name": 'cat',
+                    "size": 'big',
+                }
+            ]
+            let nameAnimals = animals.map(function(animal){
+                if (animal.id == 1){
+                    animal.name = "python";
+                }
+                return animal;
+            });
+            document.write(nameAnimals);
+        </script>
+
+</body>
+</html>

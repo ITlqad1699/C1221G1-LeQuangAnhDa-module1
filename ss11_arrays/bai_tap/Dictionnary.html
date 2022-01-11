@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+<form>
+    <input type="text" id="English" value="">
+    <input type="text" id="tiengViet" value=""  >
+    <input type="button" id="translate"  value="Dich" onclick="dich()" >
+</form>
+<script>
+    function dich(){
+        console.log(dich)
+        let english = ["dog","cat","love","you" ];
+        let vietnamese = ["chó","mèo","yêu","bạn"];
+        let tiengAnh = document.getElementById("English").value;
+        for (let i = 0; i < english.length;i++){
+            if (tiengAnh === english[i] ){
+                document.getElementById("tiengViet").value = vietnamese[i];
+            }
+        }
+    }
+</script>
+</body>
+</html>

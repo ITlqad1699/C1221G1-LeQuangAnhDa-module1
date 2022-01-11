@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TicTacToe</title>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="carogame"/>
+<input type="button" value="Change Value" onclick="changeValue()">
+<p id="thongBao"/>
+<script>
+    let b = document.getElementById('carogame');
+    let board = [];
+    for (let i = 0; i < 7; i++) {
+        board [i] = ['.', '.', '.', '.', '.', '.', '.'];
+    }
+
+    function changeValue() {
+        let positionX = prompt('X: ');
+        let positionY = prompt('Y: ');
+        let positionZ = prompt('Z: ');
+        let positionT = prompt('T: ');
+        let data = "";
+        board[positionX][positionY] = 'x';
+        board[positionZ][positionT] = 'o';
+        for (let i = 0; i < 6; i++) {
+            data = data + '<br/>';
+            for (let j = 0; j < 6; j++) {
+                data = data + board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp";
+                if ((board[i][j] === 'x') && (board[i][j + 1] === 'x') && (board[i][j + 2] === 'x')) {
+                    document.getElementById("thongBao").innerHTML = 'x win the game';
+                } else if ((board[i][j] === 'x') && (board[i + 1][j] === 'x') && (board[i + 2][j] === 'x')) {
+                    document.getElementById("thongBao").innerHTML = 'x win the game';
+                } else if ((board[i][j] === 'x') && (board[i + 1][j + 1] === 'x') && (board[i + 2][j + 2] === 'x')) {
+                    document.getElementById("thongBao").innerHTML = 'x win the game';
+                } else if ((board[i][j + 2] === 'x') && (board[i + 1][j + 1] === 'x') && (board[i + 2][j] === 'x')) {
+                    document.getElementById("thongBao").innerHTML = 'x win the game';
+                } else if ((board[i][j] === 'o') && (board[i][j + 1] === 'o') && (board[i][j + 2] === 'o')) {
+                    document.getElementById("thongBao").innerHTML = 'o win the game';
+                } else if ((board[i][j] === 'o') && (board[i + 1][j] === 'o') && (board[i + 2][j] === 'o')) {
+                    document.getElementById("thongBao").innerHTML = 'o win the game';
+                } else if ((board[i][j] === 'o') && (board[i + 1][j + 1] === 'o') && (board[i + 2][j + 2] === 'o')) {
+                    document.getElementById("thongBao").innerHTML = 'o win the game';
+                } else if ((board[i][j + 2] === 'o') && (board[i + 1][j + 1] === 'o') && (board[i + 2][j] === 'o')) {
+                    document.getElementById("thongBao").innerHTML = 'o win the game';
+                }
+            }
+        }
+        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+        b.innerHTML = '<hr>' + data;
+    }
+</script>
+</body>
+</html>

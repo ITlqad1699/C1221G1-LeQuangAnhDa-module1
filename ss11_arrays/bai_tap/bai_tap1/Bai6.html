@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangSoNguyen = [];
+    let m = parseInt(prompt('nhập vào độ dài mảng: '));
+    let c = false;
+    for (let i = 0; i < m; i++) {
+        mangSoNguyen[i] = parseInt(prompt('nhập vào phần tử thứ ' + i))
+    }
+    console.log(mangSoNguyen);
+    let value = parseInt(prompt('nhập vào số nguyên v: '));
+    for (let i = 0; i < m; i++) {
+        if (value != mangSoNguyen[i]) {
+             c = true;
+        }
+        else {
+            alert('v có trong mảng');break;
+        }
+    }
+    if (c=false) {alert('v không có trong mảng');}
+
+</script>
+
+</body>
+</html>

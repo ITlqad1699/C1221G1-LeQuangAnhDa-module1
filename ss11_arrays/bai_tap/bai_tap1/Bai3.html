@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangSoNguyen = [1,2,3,10,113,234,1323,3434,54545,2324,3443,234];
+    let max = mangSoNguyen[0];
+    let sum =0;
+    for (let i = 0; i <mangSoNguyen.length; i ++){
+        if (max < mangSoNguyen[i]) {
+            max = mangSoNguyen[i];
+        }
+        sum+= mangSoNguyen[i];
+    }
+    document.write('số lớn nhất trong mảng là: ' +max);
+    document.write('<br>');
+    document.write('tổng phần tử trong mảng là: ' +sum/10);
+</script>
+
+</body>
+</html>

@@ -6,34 +6,30 @@
 </head>
 <body>
     <script>
-            const doDai = 7;
-            document.write('&nbsp ');
-            document.write('&nbsp ');
-            for (let k=1; k<=3;k++){
-                document.write('*');
-            }
-            for (let k=1; k<=3;k++){
+        let  doDai = parseInt(prompt(''));
+        const doDai1 = doDai/2;
+        for (let i=0;i<=doDai1;i++){
+            for(let j=1;j<=doDai1-i;j++){
                 document.write('&nbsp ');
             }
-            for (let k=1; k<=3;k++){
+            for (let j=0;j<2*i;j++){
                 document.write('*');
             }
-            document.write('&nbsp ');
-            document.write('&nbsp ');
-            document.write('<br/>');
-            document.write('&nbsp ');
-            for (let k=1; k<2*doDai-2;k++){
+            for (let k = 0; k < 2 * (doDai1 - i) ; k++) {
+                document.write('&nbsp ');
+            }
+            for (let j=0;j<2*i;j++){
                 document.write('*');
             }
-            document.write('&nbsp ');
             document.write('<br/>');
-            for (let i=0;i<doDai;i++){
-                for(let j=0;j<i;j++){
-                    document.write('&nbsp ');
-                }
-                for (let k=0;k<2*(doDai-i)-1;k++){
-                    document.write('*');
-                }
+        }
+        for (let i=0;i<doDai;i++) {
+            for (let j = 0; j < i; j++) {
+                document.write('&nbsp ');
+            }
+            for (let k = 0; k < 2 * (doDai - i)-1 ; k++) {
+                document.write('*');
+            }
             document.write('<br>');
         }
     </script>
