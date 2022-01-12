@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 9</title>
+</head>
+<body>
+<script>
+    let mangSoNguyen1 = [];
+    let mangSoNguyen2 = [];
+    for (let i = 0; i < 10; i++) {
+        mangSoNguyen1[i] = parseInt(prompt('nhập vào phần tử thứ ' + i + 'mảng 1: '));
+    }
+    for (let i = 0; i < 10; i++) {
+        mangSoNguyen2[i] = parseInt(prompt('nhập vào phần tử thứ ' + i + 'mảng 2: '));
+    }
+    let mangSoNguyen = mangSoNguyen1.concat(mangSoNguyen2);
+    document.write(mangSoNguyen);
+</script>
+</body>
+</html>

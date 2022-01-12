@@ -5,16 +5,19 @@
     <title>Xếp hạng học sinh</title>
 </head>
 <body>
-    <script>
-        let dkt = parseInt(prompt('điểm kiểm tra:'));
-        let dbt = parseInt(prompt('điểm giữa kí:'));
-        let dck = parseInt(prompt('điểm cuối kì:'));
-        let diem = (dkt*2 + dbt*2 + dck*6)/10;
-        if (diem >= 8) document.write("học sinh giỏi");
-        else if (diem >=6.5) document.write("học sinh khá");
-        else if (diem >= 5) document.write("học sinh tb");
-        else document.write("học sinh yếu");
-    </script>
+<script>
+    let dkt = parseInt(prompt('điểm kiểm tra:'));
+    let dbt = parseInt(prompt('điểm giữa kí:'));
+    let dck = parseInt(prompt('điểm cuối kì:'));
+    let diem = (dkt * 2 + dbt * 2 + dck * 6) / 10;
+    if (diem >= 8) {
+        document.write("học sinh giỏi");
+    } else if (diem >= 6.5) {
+        document.write("học sinh khá");
+    } else if (diem >= 5) {
+        document.write("học sinh tb");
+    } else document.write("học sinh yếu");
+</script>
 
 </body>
 </html>

@@ -6,19 +6,25 @@
 </head>
 <body>
 
-    <script>
-        document.write("giải phương trình bậc 1 ax + b = 0");
-        document.write("<br/>");
-      //  khởi tạo các tham số:
-      let a = parseFloat(prompt("nhập vào hệ số a = "));
-      let b = parseFloat(prompt("nhập vào hệ số b = "));
-      // bước vào quá trình tính toán:
-      let x = -b/a;
-      if ( a==0) { if (b==0) document.write("phương trình có vô số nghiệm");
-      else document.write("phương trình vô nghiệm")}
-      else document.write("nghiệm của phương trình là: " +x);
+<script>
+    document.write("giải phương trình bậc 1 ax + b = 0");
+    document.write("<br/>");
+    //  khởi tạo các tham số:
+    let a = parseFloat(prompt("nhập vào hệ số a = "));
+    let b = parseFloat(prompt("nhập vào hệ số b = "));
+    // bước vào quá trình tính toán:
+    let x = -b / a;
+    if (a == 0) {
+        if (b == 0) {
+            document.write("phương trình có vô số nghiệm");
+        } else {
+            document.write("phương trình vô nghiệm");
+        }
+    } else {
+        document.write("nghiệm của phương trình là: " + x);
+    }
 
-    </script>
+</script>
 
 
 </body>

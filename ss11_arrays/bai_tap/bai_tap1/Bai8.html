@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 8</title>
+</head>
+<body>
+<script>
+    let mangSoNguyen = [];
+    let m = parseInt(prompt('nhập vào độ dài của mảng: '));
+    for (let i = 0; i < m; i++) {
+        mangSoNguyen[i] = parseInt(prompt('nhập vào phần tử thứ ' + i));
+    }
+    mangSoNguyen.sort();
+    mangSoNguyen.reverse();
+    document.write(mangSoNguyen);
+</script>
+
+</body>
+</html>

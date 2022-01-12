@@ -5,34 +5,38 @@
     <title>tính cước điện thoại</title>
 </head>
 <body>
-        <script>
-             //cước phí nội hạt mỗi tháng:
-             const cuocPhi1 = 22000 ;
-             // cước phí liên tỉnh nội mạng hoặc di động nội mạng:
-             const cuocPhi2 = 790;
-             // cước phí liên tỉnh ngoại mạng:
-             const cuocPhi3 = 1000;
-             // cước phí di động ngoại mạng:
-             const cuocPhi4 = 1090;
-             //("noi hat","noi mang", "ngoai mang", "ngoai mang di dong","noi mang di dong")
-             let phuongThuc = prompt("nhập vào phương thức gọi: ");
-             let soPhut = parseInt(prompt("số phút gọi: " ));
-             let soTien = null;
-             switch (phuongThuc) {
-                 case "noi hat":
-                     soTien = cuocPhi1;
-                     break;
-                 case "noi mang":
-                 case "noi mang di dong":
-                      soTien = cuocPhi2*soPhut;
-                      break;
-                 case "ngoai mang":
-                     soTien = cuocPhi3*soPhut;
-                     break;
-                 case "ngoai mang di dong":
-                     soTien = cuocPhi4*soPhut;
-             }
-             document.write("số tiền phải trả " +soTien)
-        </script>
+<script>
+    //cước phí nội hạt mỗi tháng:
+    const cuocPhi1 = 22000;
+    // cước phí liên tỉnh nội mạng hoặc di động nội mạng:
+    const cuocPhi2 = 790;
+    // cước phí liên tỉnh ngoại mạng:
+    const cuocPhi3 = 1000;
+    // cước phí di động ngoại mạng:
+    const cuocPhi4 = 1090;
+    //("noi hat","noi mang", "ngoai mang", "ngoai mang di dong","noi mang di dong")
+    let phuongThuc = prompt("nhập vào phương thức gọi: ");
+    let soPhut = parseInt(prompt("số phút gọi: "));
+    let soTien = null;
+    switch (phuongThuc) {
+        case "noi hat": {
+            soTien = cuocPhi1;
+            break;
+        }
+        case "noi mang":
+        case "noi mang di dong": {
+            soTien = cuocPhi2 * soPhut;
+            break;
+        }
+        case "ngoai mang": {
+            soTien = cuocPhi3 * soPhut;
+            break;
+        }
+        case "ngoai mang di dong": {
+            soTien = cuocPhi4 * soPhut;
+        }
+    }
+    document.write("số tiền phải trả " + soTien)
+</script>
 </body>
 </html>

@@ -7,14 +7,16 @@
 <body>
 <!--viết chương trình nhập vào doanh số bán hàng biết:-->
 <!--bán được dưới 150  cái trở lên thì nhận đc 2%, từ 150 cái trở lên thì nhận đc 5%, từ 250 cái thì nhận được 7%-->
-    <script>
-        let soLuong = parseInt(prompt('số lượng hàng bán được'));
-        const  donGia = 100000;
-        let hoaHong;
-        if(soLuong >= 250) hoaHong = donGia*((soLuong-250)*(7/100)+100*5/100+150*2/100);
-        else if (soLuong >= 150) hoaHong=donGia*((soLuong-150)*(5/100)+150*2/100);
-        else hoaHong = donGia*(soLuong*2/100);
-        document.write("số tiền hoa hồng là " + hoaHong);
-    </script>
+<script>
+    let soLuong = parseInt(prompt('số lượng hàng bán được'));
+    const donGia = 100000;
+    let hoaHong;
+    if (soLuong >= 250) {
+        hoaHong = donGia * ((soLuong - 250) * (7 / 100) + 100 * 5 / 100 + 150 * 2 / 100);
+    } else if (soLuong >= 150) {
+        hoaHong = donGia * ((soLuong - 150) * (5 / 100) + 150 * 2 / 100);
+    } else hoaHong = {donGia*(soLuong * 2 / 100);}
+    document.write("số tiền hoa hồng là " + hoaHong);
+</script>
 </body>
 </html>
