@@ -6,19 +6,25 @@
 </head>
 <body>
 <script>
-    let mangSoNguyen = [];
-    let m = parseInt(prompt('nhập vào độ dài của mảng: '));
+    let n;
+    let flag;
+    do {
+        n = prompt(" nhập vào độ dài mảng: ");
+        flag = (parseInt(n)==n)&&n>0;
+    } while (!flag);
+    n = parseInt(n);
+    let mangSoNguyen = new Array(n);
     let count = 0;
-    for (let i = 0; i < m; i++) {
+    for (let i = 0; i < mangSoNguyen.length; i++) {
         mangSoNguyen[i] = parseInt(prompt('nhập vào phần tử thứ ' + i));
     }
     let value = parseInt(prompt('nhập vào số nguyên v: '));
-    for (let i = 0; i < m; i++) {
+    for (let i = 0; i < mangSoNguyen.length; i++) {
         if (mangSoNguyen[i] == value) {
             document.write('số v có trong mảng');
         } else count = count + 1;
     }
-    if (count >= m ) {
+    if (count >= mangSoNguyen.length ) {
         document.write('số v không có trong mảng');
     }
 

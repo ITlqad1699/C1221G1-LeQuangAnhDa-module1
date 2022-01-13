@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Typing anything slowly</h1>
+<textarea rows="10" cols="40" id="text" onkeydown="funnyText();"></textarea>
+<script>
+    function funnyText() {
+        let chuoi1 = document.getElementById('text').value;
+        let chuoi2 = "toi la co be";
+        for (let i = 0; i < chuoi2.length; i++) {
+            chuoi1 = chuoi2;
+            document.getElementById("text").innerText = chuoi2[i];
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <label>feets</label>
+        <input type="number" id="feeter" onchange="feetToMetter(this.value)" placeholder="feets">
+        <p>metters: <span id="innerMetters"></span></p>
+        <label>metters</label>
+        <input type="number" id="metter" onchange="metterToFeet(this.value)" placeholder="metters">
+        <p>feets: <span id="innerFeets"></span></p>
+        <script>
+            function feetToMetter(valNum1) {
+                    valNum1 = parseFloat(valNum1);
+                document.getElementById("innerMetters").innerHTML = valNum1*0.305;
+            }
+            function metterToFeet(valNum2) {
+                    valNum2 = parseFloat(valNum2);
+                document.getElementById("innerFeets").innerHTML = valNum2*3.279;
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra</title>
+</head>
+<body>
+<script>
+    let number1 = parseInt(prompt('nhập vào số: '));
+    let check = checkSnt(number1);
+    if (check == true) {
+        document.write(number1 + ' là  số nguyên tố');
+    } else {
+        document.write(number1 + ' là  số không nguyên tố');
+    }
+    document.write('<br/>');
+
+    function checkSnt(soTuNhien) {
+        if (soTuNhien < 2) return false;
+        else {
+            for (let i = 2; i < Math.sqrt(soTuNhien); i++) {
+                if (soTuNhien % i == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    let number2 = parseInt(prompt('nhập vào số lượng số: '));
+    printSoNguyenTo(number2);
+
+    function printSoNguyenTo(x) {
+        let count = true;
+        for (let i = 2; i <= x; i++) {
+            for (let j = 2; j <= i - 1; j++) {
+                if (i % j == 0) {
+                    count = false;
+                }
+            }
+            if (count == true) {
+                document.write(+i + ',');
+            }
+            count = true;
+        }
+    }
+</script>
+</body>
+</html>

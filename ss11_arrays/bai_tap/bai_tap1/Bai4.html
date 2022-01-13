@@ -6,11 +6,18 @@
 </head>
 <body>
 <script>
-    let mangSoNguyen = [];
-    let m = parseInt(prompt('nhập vào độ dài mảng: '))
-    for (let i = 0; i < m; i++) {
-        mangSoNguyen[i] = parseInt(prompt('nhập vào phần tử thứ ' + i))
+    let n;
+    let flag;
+    do {
+        n = prompt("nhập vào độ dài của mảng: ");
+        flag = (parseInt(n) == n) && n > 0;
+    } while (!flag);
+    n = parseInt(n);
+    let mangSoNguyen = Array(n);
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        mangSoNguyen[i] = parseInt(prompt('nhập vào phần tử thứ ' + i));
     }
+    alert(mangSoNguyen);
     mangSoNguyen.reverse();
     console.log(mangSoNguyen);
 </script>

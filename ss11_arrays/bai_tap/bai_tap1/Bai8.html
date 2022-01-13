@@ -6,15 +6,29 @@
 </head>
 <body>
 <script>
-    let mangSoNguyen = [];
-    let m = parseInt(prompt('nhập vào độ dài của mảng: '));
-    for (let i = 0; i < m; i++) {
-        mangSoNguyen[i] = parseInt(prompt('nhập vào phần tử thứ ' + i));
+    let n;
+    let flag;
+    do {
+        n = prompt("nhập vào độ dài của mảng: ");
+        flag = (parseInt(n) == n) && n > 0;
+    } while (!flag);
+    n = parseInt(n);
+    let array = new Array(n);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = parseInt(prompt('nhập vào phần tử thứ ' + i));
     }
-    mangSoNguyen.sort();
-    mangSoNguyen.reverse();
-    document.write(mangSoNguyen);
+    alert(" mảng trước khi sắp xếp: " + array);
+    let bienPhu = null;
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (array[i] > array[j]) {
+                bienPhu = array[i];
+                array[i] = array[j];
+                array[j] = bienPhu;
+            }
+        }
+    }
+    alert("mảng sau khi sắp xếp" +array);
 </script>
-
 </body>
 </html>

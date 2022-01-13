@@ -6,22 +6,29 @@
 </head>
 <body>
 <script>
-    let mangSoNguyen = [];
-    let count;
-    let m = parseInt(prompt('nhập vào độ dài của mảng: '));
-    for (let i = 0; i < m; i++) {
-        mangSoNguyen[i] = parseInt(prompt('nhập vào phần tử thứ ' + i));
+    // let n;
+    // let flag;
+    // do {
+    //     n = prompt("nhập vào độ dài của mảng: ");
+    //     flag = (parseInt(n) == n) && n > 0;
+    // } while (!flag);
+    // n = parseInt(n);
+    // let array = new Array(n);
+    // for (let i =0; i < array.length; i++){
+    //     array[i] = parseInt(prompt('nhập vào phần tử thứ ' + i));
+    // }
+    let array = [2, 2, 4, 5, 2, 7, 5, 6];
+    let v = prompt("nhập vào số cần xóa")
+    for (let i = 0; i < array.length; i++) {
+        if (v == array[i]) {
+            for (let j = i; j < array.length - 1; j++) {
+                array[i] = array[j + 1];
+            }
+            array[array.length - 1] = 0;
+            i--;
+        }
     }
-    let value = parseInt(prompt('nhập vào số nguyên v: '));
-    for (let i = 0; i < m; i++) {
-        if (mangSoNguyen[i] == value) {
-            mangSoNguyen.splice(i, 1);
-        } else count = count + 1;
-    }
-    if (count >= m) {
-        document.write('số v không có trong mảng');
-    }
-    document.write(mangSoNguyen);
+    alert(array);
 </script>
 </body>
 </html>

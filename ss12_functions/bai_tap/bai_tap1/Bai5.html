@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form>
+    <input type="text" id="ngoisao" value="">
+    <input type="text" id="chomsao" value="">
+    <input type="button" id="checking" value="check" onclick="checkStar()">
+</form>
+<script>
+    // let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    // let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    // let checker = document.getElementById("ngoisao").value;
+    function checkStar() {
+        let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let checker = document.getElementById("ngoisao").value;
+        let count = 0;
+        for (let i = 0; i < array1.length; i++) {
+            if (checker == array1[i]) {
+                document.getElementById("chomsao").value = array2[i];
+            } else count = count + 1;
+        }
+        if (count == array1.length) {
+            alert("can't find the star");
+        }
+    }
+</script>
+</body>
+</html>
