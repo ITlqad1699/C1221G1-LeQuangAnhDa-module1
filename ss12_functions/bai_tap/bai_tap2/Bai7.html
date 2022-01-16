@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    let nhapSo1 = parseInt(prompt("nhập vào số thứu 2"));
+    let nhapSo2 = parseInt(prompt("nhập vào số thứ 1"));
+    doiCho(nhapSo1, nhapSo2);
+    function doiCho(x, y) {
+        let swap;
+        let array = [x,y]
+        swap = array[0];
+        array[0] = array[1];
+        array[1] = swap;
+        alert(array[0]);
+        alert(array[1]);
+    }
+
+</script>
+</body>
+</html>

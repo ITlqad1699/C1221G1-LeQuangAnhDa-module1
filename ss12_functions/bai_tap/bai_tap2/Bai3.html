@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giai thừa</title>
+</head>
+<body>
+<script>
+    soNguyen = parseInt(prompt("nhập vào số nguyên: "));
+    document.write(+soNguyen+"! = "+giaiThua(soNguyen));
+    function giaiThua(n) {
+        let giaiThua=1;
+        for (let i = 1; i < n; i++ ){
+            giaiThua= giaiThua*i;
+        }
+        return giaiThua;
+    }
+</script>
+
+</body>
+</html>

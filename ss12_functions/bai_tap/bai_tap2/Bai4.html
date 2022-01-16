@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiemtra</title>
+</head>
+<body>
+<script>
+    let kiTu =prompt("");
+    let b = kiemTra(kiTu);
+    alert(b);
+    function kiemTra(chuoi) {
+        for (let i = 0; i < chuoi.length; i++) {
+            if (chuoi[i] % 1 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+</script>
+</body>
+</html>

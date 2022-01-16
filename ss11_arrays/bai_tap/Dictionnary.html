@@ -8,19 +8,17 @@
 <form>
     <input type="text" id="English" value="">
     <input type="text" id="tiengViet" value="">
-    <input type="button" id="translate"  value="Dich" onclick="dich()" >
+    <input type="button" id="translate" value="Dich" onclick="dich()">
 </form>
 <script>
-    function dich(){
-        console.log(dich)
-        let english = ["dog","cat","love","you" ];
-        let vietnamese = ["chó","mèo","yêu","bạn"];
+    function dich() {
+        let english = ["dog", "cat", "love", "you"];
+        let vietnamese = ["chó", "mèo", "yêu", "bạn"];
         let tiengAnh = document.getElementById("English").value;
-        for (let i = 0; i < english.length;i++){
-            if (tiengAnh === english[i] ){
-                document.getElementById("tiengViet").value = vietnamese[i];
-            }
-        }
+        let i = english.indexOf(tiengAnh);
+        if (i > -1) {
+            document.getElementById("tiengViet").value = vietnamese[i];
+        }else document.write("không tìm thấy");
     }
 </script>
 </body>

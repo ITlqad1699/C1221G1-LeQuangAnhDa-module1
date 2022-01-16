@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapSo;
+    do {
+        nhapSo = parseInt(prompt('nhập số vào: '));
+    } while ((nhapSo % 1 !== 0) || (nhapSo === 0))
+    alert(kiemTra(nhapSo));
+
+    function kiemTra(x) {
+        parseInt(x);
+        if (x > 0) {
+            return true;
+        }
+        if (x < 0) {
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>

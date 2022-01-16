@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai9</title>
+</head>
+<body>
+<script>
+    let mangKiTu = ['123', 'asdsd', '-', 'ádsad', 'asdadasd', '12345', '-'];
+    let kiTu1 = '1';
+    kiemTra(mangKiTu, kiTu1);
+
+    function kiemTra(array, kiTu) {
+        let count1 = 0;
+        let count2 = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (kiTu == array[i]) {
+                count1 += 1;
+            } else count2 += 1;
+        }
+        if (count1 > 0) {
+            return alert("kí tự có xuất hiênn" + count1 + "lần");
+        }
+        if (count2 >= array.length) {
+            return -1;
+        }
+    }
+</script>
+</body>
+</html>
