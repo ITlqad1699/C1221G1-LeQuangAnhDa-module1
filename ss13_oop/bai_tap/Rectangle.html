@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HCN</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    let Retangle = function (x, y, chieuDai, chieuRong) {
+        this.x = x;
+        this.y = y;
+        this.chieuDai = chieuDai;
+        this.chieuRong = chieuRong;
+
+        this.tinhDienTich = function () {
+            return this.chieuDai * this.chieuRong;
+        }
+        this.tinhChuVi = function () {
+            return (this.chieuRong + this.chieuDai) * 2;
+        }
+        this.createRetangle = function () {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.rect(chuNhat.x, chuNhat.y, chuNhat.chieuDai, chuNhat.chieuRong);
+            ctx.stroke();
+            ctx.fillStyle = "#ff0000";
+            ctx.fill();
+        }
+    }
+    let chuNhat = new Retangle(100, 50, 100, 50);
+    chuNhat.createRetangle();
+    let dienTich = chuNhat.tinhDienTich();
+    let chuVi = chuNhat.tinhChuVi();
+    alert(dienTich);
+    alert(chuVi);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create an oop</title>
+</head>
+<body>
+<script>
+    // function student(id, name, address) {
+    //     this.id = id;
+    //     this.name = name;
+    //     this.address = address;
+    //     this.getInfor = function () {
+    //         return "id=" + this.id + "name=" + this.name +"address=" + this.address;
+    //     }
+    // }
+    // let student = new student(1,"nguyễn an","hà nội");
+    // console.log(student.getInfor());
+    let student = {
+        id: 1,
+        name: "nguyễn an",
+        address: "ha noi",
+        getInfor: function () {
+            return "id=" + this.id + "name=" + this.name +"address=" + this.address;
+        }
+    }
+    console.log(student.name);
+    console.log(student.getInfor());
+
+</script>
+</body>
+</html>

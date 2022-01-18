@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<span>celsius: </span><span id="span3"></span>
+<br>
+<span>fahrenheit: </span><span id="span1"></span>
+<br>
+<span>kevin: </span><span id="span2"></span>
+<script>
+    let Temperature = function (doC) {
+        this.doC = doC;
+        this.chuyendoi1 = function () {
+            return (doC * 9 / 5 + 32);
+        }
+        this.chuyendoi2 = function () {
+            return (doC + 273);
+        }
+    }
+    let nhietDo = new Temperature(25);
+    let fahrenheit = nhietDo.chuyendoi1();
+    let kelvin = nhietDo.chuyendoi2();
+    document.getElementById("span1").innerHTML = fahrenheit;
+    document.getElementById("span2").innerHTML = kelvin;
+    document.getElementById("span3").innerHTML = nhietDo.doC;
+
+</script>
+</body>
+</html>
