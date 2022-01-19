@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CongTacVaBongDen</title>
+</head>
+<body>
+<script>
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        turnOff() {
+            if (congTac.switchOff()) {
+                return this.getStatus() == true;
+            } else {
+                return this.getStatus() == false;
+            }
+        }
+
+        turnOn() {
+            if (congTac.switchOn()) {
+                return this.getStatus() == true;
+            } else {
+                return this.getStatus() == false;
+            }
+        }
+    }
+
+    let congTac = new SwitchButton()
+
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        getLamp() {
+            return this.lamp;
+        }
+
+        connectToLamp() {
+
+        }
+
+        switchOff() {
+            if (this.getStatus() == false) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        switchOn() {
+            if (this.getStatus() == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+</script>
+</body>
+</html>

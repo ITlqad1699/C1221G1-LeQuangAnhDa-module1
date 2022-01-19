@@ -6,81 +6,52 @@
 </head>
 <body>
 <script>
-    class Mobiles {
-        constructor(battery, messageOnDraft, inbox, messageSent, display) {
+    class Mobile {
+        constructor(id, name, battery) {
+            this.id = id;
+            this.name = name;
+            this.message = "";
             this.battery = battery;
-            this.messageOnDraft = messageOnDraft;
-            this.inbox = inbox;
-            this.messageSent = messageSent;
-            this.display = display;
-            this.usingFunction();
+            this.trangThai = true;
+            this.vungSoanTin = "";
+            this.vungTinDaGui = [];
+            this.vungHopThuDen = [];
         }
 
-        checkPhone() {
-            if (this.display) {
-                return true;
-            } else {
-                return false;
+        getTrangThai() {
+            return this.trangThai;
+        }
+
+        turnOnOff() {
+            this.trangThai = !this.trangThai;
+        }
+
+        chargeBattery() {
+            if (this.battery < 10) {
+                this.battery = 100;
             }
         }
 
-        turnThePhone() {
-            if (this.display) {
-                return false;
-            } else {
-                return true;
-            }
+        soanTin(message) {
+            this.vungSoanTin = message;
         }
 
-        chargingBattery() {
-            for (let i = this.battery; i < 100; i++) {
-                return this.battery += 1;
-            }
+        nhanTinNhan(message) {
+            this.vungHopThuDen.push(message);
         }
 
-        texting() {
-            return this.messageOnDraft;
+        guiTinNhan(dienThoai, message) {
+            this.soanTin(message);
+            this.vungTinDaGui.push(this.vungSoanTin);
+            this.vungSoanTin() = "";
+            dienThoai.nhanTinNhan(this.vungTinDaGui);
+        }
+        hienThiHopThuDen(){
+            console.log(this.vungHopThuDen)
         }
 
-        recieving() {
-            return this.inbox;
-        }
-
-        sending() {
-            return this.messageSent;
-
-        }
-
-        reviewing() {
-            return this.messageSent;
-        }
-
-        usingFunction() {
-            let count = 0;
-            if (this.sending() || !this.sending()) {
-                count = count + 1;
-            }
-            if (this.recieving() || !this.recieving()) {
-                count = count + 1;
-            }
-            if (this.reviewing() || !this.reviewing()) {
-                count = count + 1;
-            }
-            if (this.texting() || !this.texting()) {
-                count = count + 1;
-            }
-            this.battery -= count;
-        }
     }
 
-
-    let iphone = new Mobiles(70, "love you", "fine", "anh đà", false);
-    // // let turnOff = iphone.turnThePhone();
-    // let message = iphone.texting();
-    // let message1 = iphone.reviewing();
-    // let battery = iphone.battery;
-    // alert(battery);
-    console.log(iphone);
 </script>
 </body>
 </html>
