@@ -7,8 +7,8 @@
 <body>
 <script>
     class ElectricLamp {
-        constructor(status) {
-            this.status = status;
+        constructor() {
+                this.status = congTac.connectToLamp();
         }
 
         getStatus() {
@@ -16,23 +16,22 @@
         }
 
         turnOff() {
-            if (congTac.switchOff()) {
-                return this.getStatus() == true;
+            if (congTac.switchOff() == true) {
+                return true;
             } else {
-                return this.getStatus() == false;
+                return false;
             }
         }
 
         turnOn() {
-            if (congTac.switchOn()) {
-                return this.getStatus() == true;
+            if (congTac.switchOn() == true) {
+                return true;
             } else {
-                return this.getStatus() == false;
+                return false;
             }
         }
     }
 
-    let congTac = new SwitchButton()
 
     class SwitchButton {
         constructor(status, lamp) {
@@ -49,7 +48,11 @@
         }
 
         connectToLamp() {
-
+            if (this.getStatus() == true) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
         switchOff() {
@@ -68,6 +71,15 @@
             }
         }
     }
+
+    let congTac = new SwitchButton(true);
+    let bongDen = new ElectricLamp();
+    console.log(bongDen.turnOff());
+    console.log(bongDen.turnOn());
+    console.log(congTac.switchOff());
+    console.log(congTac.switchOn());
+    console.log(congTac.connectToLamp());
+    console.log(bongDen.getStatus());
 </script>
 </body>
 </html>
