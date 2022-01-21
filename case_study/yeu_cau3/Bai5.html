@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+<p id="display"></p><br>
+<script>
+    // let listProduct = ["Cafe", "cam vắt", "nước ép cà rốt", "Nước dừa"];
+    // let donGia = [15, 20, 35, 14];
+    // display(listProduct, donGia);
+    // function display(list, giaTien) {
+    //     let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+    //         '<tr>\n' +
+    //         '<th>STT</th>\n' +
+    //         '<th>Name</th>\n' +
+    //         '<th>Đơn giá</th>\n' +
+    //         '</tr>';
+    //     for (let i = 0; i < list.length; i++) {
+    //         tableString += '<tr>\n' +
+    //             '<td>' + (i + 1) + '</td>\n' +
+    //             '<td >' + list[i] + '</tdid>\n' +
+    //             '<td >' + giaTien[i] + '</td>\n' +
+    //             '<td><input type="button" value="chọn" onclick="tinhTien(donGia)"></td>\n' +
+    //             '</tr>';
+    //     }
+    //     tableString += '</table>';
+    //     document.getElementById("display").innerHTML = tableString;
+    // }
+    //
+    // function tinhTien(gia) {
+    //     let soLuong;
+    //     let thanhTien=0;
+    //     do {
+    //          soLuong = parseInt(prompt('nhập số lượng cần mua'));
+    //     } while(soLuong!=7);
+    //     for (let i =0;i<gia.length;i++){
+    //         thanhTien += soLuong*gia[i];
+    //     }
+    //     alert("thành tiền: "+thanhTien);
+    // }
+    let sum = 0;
+    let dongia = null;
+    let soLuong;
+    let bangChon;
+    do {
+         bangChon = prompt('bảng chọn đồ uống:\n' +
+            '1: cafe\n' +
+            '2: cam vắt\n' +
+            '3: nước ép cà rốt\n' +
+            '4: nước ép cà chua\n' +
+            '5: nước lọc\n' +
+            '6: nước mía\n' +
+            '7: đóng menu\n');
+
+        switch (bangChon) {
+
+            case "1":
+                dongia = 10000;
+                soLuong = parseInt(prompt("nhập số lượng muốn mua: "));
+                sum += dongia * soLuong;
+                console.log(sum);
+                break;
+            case "2":
+                dongia = 15000;
+                soLuong = parseInt(prompt("nhập số lượng muốn mua: "));
+                sum += dongia * soLuong;
+                break;
+            case "3":
+                dongia = 12000;
+                soLuong = parseInt(prompt("nhập số lượng muốn mua: "));
+                sum += dongia * soLuong;
+                console.log(sum);
+                break;
+            case "4":
+                dongia = 20000;
+                soLuong = parseInt(prompt("nhập số lượng muốn mua: "));
+                sum += dongia * soLuong;
+                console.log(sum);
+                break;
+            case "5":
+                dongia = 30000;
+                soLuong = parseInt(prompt("nhập số lượng muốn mua: "));
+                sum += dongia * soLuong;
+                console.log(sum);
+                break;
+            case "6":
+                dongia = 13000;
+                soLuong = parseInt(prompt("nhập số lượng muốn mua: "));
+                sum += dongia * soLuong;
+                console.log(sum);
+                break;
+            case "7":
+                alert("tổng tiền: " + sum);
+                break;
+        }
+    }
+    while (bangChon != 7);
+</script>
+</body>
+</html>

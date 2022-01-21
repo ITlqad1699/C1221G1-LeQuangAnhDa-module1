@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = prompt("nhập vào độ dài của mảng a: ");
+    }while ( n <0 || n % 1 !=0);
+    let arr = Array(n);
+    for (let i = 0;i<n;i++){
+        arr[i] = parseInt(prompt("nhập vào phần tử thứ " +i ));
+    }
+    let arr1 = Array(n);
+    let sum = 0;
+    for (let i =0; i<n;i++){
+        sum += arr[i];
+        arr1[i] = sum;
+    }
+    console.log(arr1);
+</script>
+</body>
+</html>

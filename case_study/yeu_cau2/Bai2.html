@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra chuỗi kí tự</title>
+</head>
+<body>
+<script>
+    let arr = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
+    let count = 0;
+    let kyTu;
+    do {
+         kyTu = prompt("nhập vào ký tự nào: ");
+    } while ((kyTu.length !== 1)||(kyTu % 1 == 0));
+    for (let i = 0; i < arr.length; i++) {
+        if (kyTu == arr[i]) {
+            document.write("đây là nguyên âm");
+            break;
+        } else {
+            count += 1;
+        }
+    }
+    if (count=arr.length){
+        document.write("đây không phải là nguyên âm");
+    }
+</script>
+</body>
+</html>

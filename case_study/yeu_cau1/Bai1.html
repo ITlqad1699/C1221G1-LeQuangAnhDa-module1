@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ hình chữ nhật rỗng</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt(''));
+    let b = parseInt(prompt(''));
+    for (let i = 1; i <= a; i++) {
+        if (i == 1 || i == a) {
+            for (let j = 1; j <= b; j++) {
+                document.write("*");
+            }
+        } else {
+            document.write("*");
+            for (let j = 2; j <= b - 1; j++) {
+                document.write("&nbsp ");
+            }
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

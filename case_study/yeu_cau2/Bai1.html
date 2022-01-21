@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế thu nhập và lương ròng</title>
+</head>
+<body>
+<script>
+        let tienLuong = parseInt(prompt("số tiền lương hằng tháng là(tính bằng triệu đồng): "));
+        let thue;
+        let tienLuongThuc;
+        if (tienLuong<7){
+            thue = tienLuong*5/100;
+        } else if(tienLuong<15){
+            thue = 7*5/100+(tienLuong-7)*10/100;
+        } else {
+            thue = 7*5/100+8*10/100+(tienLuong-15)*20/100;
+        }
+        tienLuongThuc = tienLuong - thue;
+        document.write(" tiền thuế phải đóng :"+thue);
+        document.write('<br>');
+        document.write(" tiền lương thực tế :"+tienLuongThuc);
+</script>
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ tam giác rỗng</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt(""));
+    for (let i = 1; i <= a; i++) {
+        if (i == 1 || i == a) {
+            for (let j = 1; j <= i; j++) {
+                document.write("*");
+            }
+        } else {
+            document.write("*");
+            for (let j = 2; j <= i - 1; j++) {
+                document.write("&nbsp ");
+            }
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

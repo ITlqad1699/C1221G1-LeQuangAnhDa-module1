@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check2String</title>
+</head>
+<body>
+<script>
+    //bài này em làm xuất ra giá trị dư trong cả A và B; nếu muốn tìm dư trong B thì em chỉ cần sửa lại 1 xíu code thôi ạ!!
+    let array1 = [1,2,3,4,346,323] ;
+    let array2 = [1,3,4,56,7,5,3] ;
+    findMissingValue(array1,array2);
+        function findMissingValue(a, b) {
+            for (let i = 0; i < a.length; i++) {
+                for (let j = 0; j < b.length; j++) {
+                    if (a[i] == b[j]) {
+                        b[j] = 0;
+                        a[i] = 0;
+                        break;
+                    }
+                }
+            }
+            console.log(b);
+            console.log(a);
+            let missingValue = Array();
+            for (let k = 0; k < a.length; k++) {
+                if (a[k] != 0) {
+                    missingValue.push(a[k]);
+                }
+            }
+            for (let k = 0; k < b.length; k++) {
+                if (b[k] != 0) {
+                    missingValue.push(b[k]);
+                }
+            }
+            console.log(missingValue);
+        }
+</script>
+</body>
+</html>

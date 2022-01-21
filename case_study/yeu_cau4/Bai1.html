@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuẩn hóa xâu kí tự</title>
+</head>
+<body>
+<script>
+    let xauKiTu = prompt("nhập vào chuỗi nào: ");
+    xauKiTu = xauKiTu.toLowerCase();
+    let array = xauKiTu.split(" ");
+    let newArray = Array();
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] !== "") {
+            newArray.push(array[i]);
+        }
+    }
+    let arr = new Array();
+    let chuanHoa = ""
+    for (let i = 0; i < newArray.length; i++) {
+        arr[i] = makeUpper(newArray[i]);
+        chuanHoa += arr[i] + " ";
+    }
+
+    function makeUpper(text) {
+        let chuoi = text.split('');
+        for (let i = 0; i < chuoi.length; i++) {
+            if (i == 0) {
+                chuoi[i] = chuoi[i].toUpperCase();
+            } else {
+                chuoi[i] = chuoi[i].toLowerCase();
+            }
+        }
+        return chuoi.join('');
+    }
+
+    console.log(arr);
+    document.write(chuanHoa);
+</script>
+</body>
+</html>

@@ -3,11 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>cờ caro</title>
+    <style>
+       .co  {
+
+        }
+    </style>
 </head>
 <body>
 <p id="display"></p>
+
+<!--    <div style="background-color: cadetblue;height: 50px;width: 50px;"></div>-->
+<!--    <div style="background-color: red;height: 50px;width: 50px;"></div>-->
+<!--    <div style="background-color: cadetblue;height: 50px;width: 50px;"></div>-->
+
 <script>
-    
+    class CoCaRo{
+     hienThi() {
+        let array = new Array(10);
+        for (let i = 0; i < 10; i++) {
+            array[i] = new Array(10);
+            for (let j = 0; j < 10; j++) {
+                array[i][j] = ""
+            }
+        }
+        let tableString = '<table border="1">';
+        for (let i = 0; i < 10; i++) {
+            tableString += ' <tr>';
+            for (let j = 0; j < 10; j++) {
+                tableString += '<td style="width: 25px;height: 25px;position: absolute" onclick="danhDau(' + i + ',' + j + ')">' + array[i][j] + '</td>';
+            }
+            tableString += '</tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+    }
+    let n = new CoCaRo();
+    n.hienThi()
 </script>
 </body>
 </html>
