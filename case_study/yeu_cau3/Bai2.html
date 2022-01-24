@@ -14,8 +14,8 @@
             for (let i = 0; i < a.length; i++) {
                 for (let j = 0; j < b.length; j++) {
                     if (a[i] == b[j]) {
-                        b[j] = 0;
-                        a[i] = 0;
+                        b[j] = '';
+                        a[i] = '';
                         break;
                     }
                 }
@@ -24,12 +24,12 @@
             console.log(a);
             let missingValue = Array();
             for (let k = 0; k < a.length; k++) {
-                if (a[k] != 0) {
+                if (a[k] != '') {
                     missingValue.push(a[k]);
                 }
             }
             for (let k = 0; k < b.length; k++) {
-                if (b[k] != 0) {
+                if (b[k] != '') {
                     missingValue.push(b[k]);
                 }
             }

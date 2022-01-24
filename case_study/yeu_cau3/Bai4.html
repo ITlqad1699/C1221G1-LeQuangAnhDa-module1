@@ -11,32 +11,51 @@
         nhapSo = prompt("nhập số từ bàn phiếm")
     } while (nhapSo % 1 != 0);
     let arrChu = Array();
-    let text='';
-    for (let i = 0; i < nhapSo.length; i++) {
-        if (nhapSo[i] == 0) {
+    let text = '';
+    switch (nhapSo) {
+        case "0":
             arrChu.push("không");
-        } else if (nhapSo[i] == 1) {
+            break;
+
+        case "1":
             arrChu.push("một");
-        } else if (nhapSo[i] == 2) {
+            break;
+
+        case "2":
             arrChu.push("hai");
-        } else if (nhapSo[i] == 3) {
+            break;
+
+        case "3":
             arrChu.push("ba");
-        } else if (nhapSo[i] == 4) {
+            break;
+
+        case "4":
             arrChu.push("bốn");
-        } else if (nhapSo[i] == 5) {
+            break;
+
+        case "5":
             arrChu.push("năm");
-        } else if (nhapSo[i] == 6) {
+            break;
+
+        case "6":
             arrChu.push("sáu");
-        } else if (nhapSo[i] == 7) {
+            break;
+
+        case "7":
             arrChu.push("bảy");
-        } else if (nhapSo[i] == 8) {
+            break;
+
+        case "8":
             arrChu.push("tám");
-        } else {
+            break;
+
+        case "9":
             arrChu.push("chín");
-        }
+            break;
+    }
+    for (let i = 0; i < arrChu.length;i++) {
         text += arrChu[i];
     }
-    console.log(arrChu);
     alert(text);
 </script>
 </body>
