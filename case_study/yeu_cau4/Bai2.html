@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>string2</title>
+</head>
+<body>
+<script>
+        let str = prompt("nhập chuỗi bất kì");
+        let arrayStr = [];
+        for (let i =0;i<str.length;i++){
+            if (arrayStr.indexOf(str[i])===-1){
+                arrayStr.push(str[i]);
+            }
+        }
+        console.log(arrayStr);
+        document.write("số kí tự khác nhau là:  "+arrayStr.length);
+</script>
+</body>
+</html>

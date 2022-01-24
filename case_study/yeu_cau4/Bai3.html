@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let str1 = prompt("nhập chuỗi 1 bất kì");
+    let str2 = prompt("nhập chuỗi 2 bất kì");
+    let arrayStr1 = [];
+    let arrayStr2 = [];
+    for (let i = 0; i < str1.length; i++) {
+        if (arrayStr1.indexOf(str1[i]) === -1) {
+            arrayStr1.push(str1[i]);
+        }
+    }
+    for (let i = 0; i < str2.length; i++) {
+        if (arrayStr2.indexOf(str2[i]) === -1) {
+            arrayStr2.push(str2[i]);
+        }
+    }
+    let str = arrayStr1.join('');
+    let arrayStr = [];
+    let flag = 0;
+    let count = 0;
+    console.log(str);
+    for (let i = 0; i < str.length; i++) {
+        if (arrayStr2.indexOf(str[i]) === -1) {
+            flag = 1;
+        } else {
+            arrayStr.push(str[i]);
+            count += 1;
+        }
+        flag = 0;
+    }
+
+    console.log(arrayStr1);
+    console.log(arrayStr2);
+    console.log(arrayStr);
+    document.write("có tất cả " + count + ' kí tự giống nhau là ' + arrayStr);
+</script>
+</body>
+</html>

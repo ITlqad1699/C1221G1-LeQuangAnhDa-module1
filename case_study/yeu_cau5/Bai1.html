@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let m;
+    let n;
+    do {
+        m = prompt("nhập số hàng: ");
+        n = prompt("nhập số cột: ")
+    } while ((m < 0 && n < 0) || (m % 1 !== 0 && n % 1 !== 0));
+    function sumMangHaiChieu(x,y) {
+        let arr = [];
+        let sum = 0;
+        for (let i = 0; i < x; i++) {
+            arr[i] = new Array(i);
+            for (let j = 0; j < y; j++) {
+                arr[i][j] = parseInt(prompt());
+                if (arr[i][j] % 2 === 0) {
+                    sum += arr[i][j]
+                }
+            }
+        }
+        return sum;
+    }
+    let tong = sumMangHaiChieu(m,n);
+    alert(tong);
+
+
+</script>
+</body>
+</html>

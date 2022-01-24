@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m;
+    let n;
+    do {
+        m = prompt("nhập số hàng: ");
+        n = prompt("nhập số cột: ")
+    } while ((m < 0 && n < 0) || (m % 1 !== 0 && n % 1 !== 0));
+
+    function timMinVaMax(x, y) {
+        let arr = [];
+        let max;
+        let min;
+        for (let i = 0; i < x; i++) {
+            arr[i] = new Array(i);
+            for (let j = 0; j < y; j++) {
+                arr[i][j] = parseInt(prompt());
+                min = arr[0][0];
+                max = arr[0][0];
+                if (max < arr[i][j]) {
+                    max = arr[i][j];
+                }
+                if (min > arr[i][j]) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        document.write("phần tử lớn nhất là: " + max);
+        document.write("<br>");
+        document.write("phần tử bé nhất là: " + min);
+    }
+
+    let checking = timMinVaMax(m, n);
+    console.log(checking);
+
+</script>
+</body>
+</html>

@@ -6,20 +6,24 @@
 </head>
 <body>
 <script>
-    let xauKiTu = prompt("nhập vào chuỗi nào: ");
-    xauKiTu = xauKiTu.toLowerCase();
-    let array = xauKiTu.split(" ");
-    let newArray = Array();
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] !== "") {
-            newArray.push(array[i]);
+    let str = chuyenDoi(prompt("nhập vào chuỗi nào: "));
+
+    function chuyenDoi(xauKiTu) {
+        xauKiTu = xauKiTu.toLowerCase();
+        let array = xauKiTu.split(" ");
+        let newArray = Array();
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] !== "") {
+                newArray.push(array[i]);
+            }
         }
-    }
-    let arr = new Array();
-    let chuanHoa = ""
-    for (let i = 0; i < newArray.length; i++) {
-        arr[i] = makeUpper(newArray[i]);
-        chuanHoa += arr[i] + " ";
+        let arr = new Array();
+        let chuanHoa = ""
+        for (let i = 0; i < newArray.length; i++) {
+            arr[i] = makeUpper(newArray[i]);
+            chuanHoa += arr[i] + " ";
+        }
+        return chuanHoa;
     }
 
     function makeUpper(text) {
@@ -34,8 +38,7 @@
         return chuoi.join('');
     }
 
-    console.log(arr);
-    document.write(chuanHoa);
+    document.write(str);
 </script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài2</title>
+</head>
+<body>
+<script>
+    let m;
+    let n;
+    do {
+        m = prompt("nhập số hàng: ");
+        n = prompt(" nhập số cột: ")
+    } while ((m < 0 && n < 0) || (m % 1 !== 0 && n % 1 !== 0));
+    let array =mangHaiChieu(m,n);
+    function mangHaiChieu(x,y) {
+        let arr = [];
+        let arraySnt = []
+        for (let i = 0; i < x; i++) {
+            arr[i] = new Array(i);
+            for (let j = 0; j < y; j++) {
+                arr[i][j] = parseInt(prompt());
+                if (checkSnt(arr[i][j])) {
+                    arraySnt.push(arr[i][j]);
+                }
+            }
+        }
+        return arraySnt;
+    }
+    function checkSnt(x){
+        if (x<2){
+            return false;
+        }
+        else if(x===2){
+            return true;
+        } else if(x%2===0){
+            return  false;
+        } else {
+            for  (let i=2;i<x;i++){
+                if(x%i===0){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    console.log(array);
+</script>
+</body>
+</html>
