@@ -8,55 +8,15 @@
 <script>
     let nhapSo;
     do {
-        nhapSo = prompt("nhập số từ bàn phiếm")
-    } while (nhapSo % 1 != 0);
-    let arrChu = Array();
-    let text = '';
-    switch (nhapSo) {
-        case "0":
-            arrChu.push("không");
-            break;
-
-        case "1":
-            arrChu.push("một");
-            break;
-
-        case "2":
-            arrChu.push("hai");
-            break;
-
-        case "3":
-            arrChu.push("ba");
-            break;
-
-        case "4":
-            arrChu.push("bốn");
-            break;
-
-        case "5":
-            arrChu.push("năm");
-            break;
-
-        case "6":
-            arrChu.push("sáu");
-            break;
-
-        case "7":
-            arrChu.push("bảy");
-            break;
-
-        case "8":
-            arrChu.push("tám");
-            break;
-
-        case "9":
-            arrChu.push("chín");
-            break;
+        nhapSo = prompt("Nhập số bất kì để chuyển thành chữ");
+    } while (isNaN(nhapSo));
+    let str = ["không","một","hai","ba","bốn","năm","sáu","bảy","tám","chín"];
+    let arrNum = nhapSo.split('');
+    let  toStr = "";
+    for (let i = 0; i < arrNum.length; i++) {
+        toStr += " "+str[arrNum[i]];
     }
-    for (let i = 0; i < arrChu.length;i++) {
-        text += arrChu[i];
-    }
-    alert(text);
+    document.write(toStr);
 </script>
 </body>
 </html>

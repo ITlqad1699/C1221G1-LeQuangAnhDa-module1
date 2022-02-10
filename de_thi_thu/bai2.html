@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let chuoi = prompt("nhaap vao chuoi: ");
+    xuLyChuoi(chuoi);
+    function xuLyChuoi(string) {
+        //Khai báo:
+        let str = string.trim().toUpperCase();
+        let arrayStr = str.split(" ");
+        let count = 0;
+        let newArrStr = new Array();
+        let finalStr = new Array();
+        //xử lý chuỗi:
+        for (let i = 0; i < arrayStr.length; i++) {
+            if (arrayStr[i] !== " ") {
+                count += 1;
+                newArrStr.push(arrayStr[i]);
+            }
+        }
+        if (count <= 1) {
+            document.write(" chuoi khong can xu ly")
+        } else {
+            for (let i = 0; i < newArrStr.length; i++) {
+                for (let j = 0; j < newArrStr[i].length; j++) {
+                    finalStr.push(newArrStr[i][0]);
+                    break;
+                }
+            }
+            let final = finalStr.join("");
+            document.write("chuỗi sau khi xử lí là: " +final);
+        }
+    }
+</script>
+</body>
+</html>

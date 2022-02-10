@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let n;
+    let flag;
+    do {
+        n = prompt("nhập vào số phần tử của mảng bé hơn 50: ");
+        flag = (parseInt(n) === n) && n > 0 ;
+    } while (!flag && n >50);
+    n = parseInt(n);
+    let array = new Array(n);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = parseInt(prompt("nhap vao phan tu thu " + i));
+    }
+    document.write("mảng sau khi nhập là: " + array)
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (i % 3 === 0 && array[i] % 5 === 0) {
+            sum += array[i];
+            count += 1;
+        }
+    }
+    console.log(sum);
+    console.log(count);
+    let trungBinh = sum / count;
+    document.write("trung binh cua cac phan tu chia het cho 5 o vi tri chia het cho 3 la: " + trungBinh);
+</script>
+</body>
+</html>

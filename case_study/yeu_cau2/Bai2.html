@@ -12,16 +12,25 @@
     do {
          kyTu = prompt("nhập vào ký tự nào: ");
     } while ((kyTu.length !== 1)||(kyTu % 1 == 0));
-    for (let i = 0; i < arr.length; i++) {
-        if (kyTu == arr[i]) {
-            document.write("đây là nguyên âm");
-            break;
-        } else {
-            count += 1;
-        }
+    // cách 1:
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (kyTu === arr[i]) {
+    //         document.write("đây là nguyên âm");
+    //         break;
+    //     } else {
+    //         count += 1;
+    //     }
+    // }
+    // if (count=arr.length){
+    //     document.write("đây không phải là nguyên âm");
+    // }
+    /*.............................................................................*/
+    // cách 2:
+    if (arr.indexOf(kyTu)===-1){
+        document.write("đây là phụ âm");
     }
-    if (count=arr.length){
-        document.write("đây không phải là nguyên âm");
+    else {
+        document.write("đây là nguyên âm");
     }
 </script>
 </body>
